@@ -7,7 +7,6 @@ export default function HeroSection() {
       className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-20 relative overflow-hidden"
       style={{
         backgroundColor: "#060606",
-        width: "1920px",
         height: "550px",
       }}
     >
@@ -24,7 +23,8 @@ export default function HeroSection() {
       {/* Text side */}
       <div className="flex-1 relative z-10">
         <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-white">
-          Software for the <br /> Building Industry
+          Software for the
+          <span className="block mt-4">Building Industry</span>
         </h1>
 
         {/* Button with pattern background */}
@@ -33,7 +33,7 @@ export default function HeroSection() {
           <img
             src={bgPattern}
             alt=""
-            className="absolute left-[-200px] top-1/2 -translate-y-1/2 opacity-70 h-auto w-[300px] object-cover"
+            className="absolute left-[-80px] top-[73%] -translate-y-1/2 opacity-70 h-auto w-[300px] object-cover"
           />
           {/* Button */}
           <button className="relative inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-white font-semibold z-10">
@@ -43,15 +43,29 @@ export default function HeroSection() {
       </div>
 
       {/* Image side */}
-      <div className="flex-1 relative z-10 opacity-100">
-        <img
-          src="https://via.placeholder.com/500x400"
-          alt="Building"
-          className="rounded-lg shadow-lg"
-        />
-        <span className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded text-sm font-bold">
-          8.05 x 8.05
-        </span>
+      <div className="flex-1 relative z-10 flex justify-start lg:ml-20">
+        <div className="relative w-[600px] h-[400px]">
+          {/* Background corner image */}
+          <img
+            src="/image.png"
+            alt="Building"
+            className="rounded-lg shadow-lg w-[250px] h-[250px] object-cover absolute -bottom-8 -left-16 z-10"
+          />
+
+          {/* Main Image slightly smaller to reveal corner */}
+          <img
+            src="/building.jpg"
+            alt="Building"
+            className="rounded-lg shadow-lg w-[680px] h-[400px] object-cover relative z-20"
+          />
+          {/* Top-right background image */}
+
+          <img
+            src="/topright.png"
+            alt="Building"
+            className="rounded-lg shadow-lg w-[350px] h-[120px] object-cover absolute -top-24 -right-40 z-10"
+          />
+        </div>
       </div>
     </section>
   );
